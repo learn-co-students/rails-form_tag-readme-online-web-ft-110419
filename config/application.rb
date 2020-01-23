@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module BlogFlash
   class Application < Rails::Application
+  	# config.web_console.whitelisted_ips = '<2601:184:407f:fd70:dcca:1817:f027:d9c3>'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
