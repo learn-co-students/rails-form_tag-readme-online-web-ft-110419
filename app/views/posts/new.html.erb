@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<h3>Post Form</h3>
+<!-- 		<form method = "POST" action = "<%= posts_path %>">
+			<p><label>Post Title:</label> <input type = "text" name = "title" id = "title"></p>
+			<p><label>Description:</label> <input type = "text" name = "description" id = "description"></p>
+			<input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+			<p><input type = "submit" value = "Submit Post" id = "submit"></p>
+		</form>
+		<p></p> -->
+		<%= form_tag posts_path do %>
+			<label>Post Title:</label>
+			<%= text_field_tag :title %>
+			<p><label>Post Description:</label></p>
+			<%= text_area_tag :description %>
+			<p></p>
+			<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+			<%= submit_tag "Submit Post" %>
+		<% end %>
+	</body>
+</html>
